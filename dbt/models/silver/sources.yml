@@ -1,0 +1,76 @@
+version: 2
+
+sources:
+  - name: public
+    description: "Raw data from the MinIO lake."
+    database: iceberg
+    schema: public
+    tables:
+      - name: BLDY_REQ_INFO_VIEW_HAIL_37
+        description: "Building request information view from HAIL 37"
+        loaded_at_field: CREATE_DATE
+        columns:
+          - name: LICENSES_NO
+            description: "License number"
+            tests:
+              - not_null
+          - name: REQUESTS_ID
+            description: "Request ID"
+            tests:
+              - not_null
+              - unique
+          - name: CREATE_DATE
+            description: "Last update timestamp"
+            tests:
+              - not_null
+
+      - name: V_BUILD_MAIN_REQ_HAIL_37
+        description: "Building main request view from HAIL 37"
+        loaded_at_field: REQUESTS_CREATE
+        columns:
+          - name: LICENSE_ID
+            description: "License ID"
+            tests:
+              - not_null
+              - unique
+          - name: REQUESTS_CREATE
+            description: "Issue date of the license"
+            tests:
+              - not_null
+          - name: REQUESTS_ID
+            description: "District identifier"
+
+      - name: V_KROKI_MAIN_DATA_HAIL_37
+        description: "Kroki (blueprint) main data view from HAIL 37"
+        loaded_at_field: V_R_CREATE_DATE
+        columns:
+          - name: C_SURVEY_REPORT_ID
+            description: "Survey report ID"
+            tests:
+              - not_null
+          - name: AMANA_ID
+            description: "Amana identifier"
+          - name: R_DISTRICT_ID
+            description: "District identifier"
+
+      - name: BLDY_LIC_IN_RAQABA_ALL
+        description: "Source table containing license information for businesses in Raqaba"
+        loaded_at_field: sdad_update_date  # Using the timestamp field to track freshness
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        columns:
+          - name: trade_name
+            description: "The trade or business name"
+            tests:
+              - not_null
+          - name: licenses_no
+            description: "License number"
+            tests:
+              - not_null
+              - unique
+          - name: requests_id
+            description: "Unique identifier for the request"
+            tests:
+              - not_null
+              - unique"

@@ -1,0 +1,479 @@
+version: 2
+
+models:
+  - name: BLDY_REQ_INFO_VIEW_HAIL_37
+    description: "Building request information view"
+    columns:
+      - name: LICENSES_NO
+        description: "License number"
+        data_type: number
+      - name: LICENSES_START_HDATE
+        description: "License start date (Hijri)"
+        data_type: varchar
+      - name: LICENSES_END_HDATE
+        description: "License end date (Hijri)"
+        data_type: varchar
+      - name: AGENT_PERSON_ID
+        description: "Agent person ID"
+        data_type: varchar
+      - name: SUBMITTER_ID_TYPE
+        description: "Submitter ID type"
+        data_type: number
+      - name: TYPE
+        description: "Type"
+        data_type: number
+      - name: NAME
+        description: "Name"
+        data_type: varchar
+      - name: REQUESTS_ID
+        description: "Request ID"
+        data_type: number
+      - name: STATUS_ID
+        description: "Status ID"
+        data_type: number
+      - name: STATUS_NAME
+        description: "Status name"
+        data_type: varchar
+      - name: UPDATE_DATE
+        description: "Update date"
+        data_type: timestamp
+      - name: DISTRICT_ID
+        description: "District ID"
+        data_type: number
+      - name: DISTRICTNAME
+        description: "District name"
+        data_type: varchar
+      - name: STORE_ID
+        description: "Store ID"
+        data_type: number
+      - name: LOCATION_LAND_NO
+        description: "Location land number"
+        data_type: varchar
+      - name: X
+        description: "X coordinate"
+        data_type: varchar
+      - name: Y
+        description: "Y coordinate"
+        data_type: varchar
+      - name: LOCATION_MAP_NO
+        description: "Location map number"
+        data_type: varchar
+      - name: STREET_ID
+        description: "Street ID"
+        data_type: number
+      - name: STREET_NAME
+        description: "Street name"
+        data_type: varchar
+      - name: AMANANAME
+        description: "Amana name"
+        data_type: varchar
+      - name: BALADIANAME
+        description: "Baladia name"
+        data_type: varchar
+      - name: MUNICIPALITY_ID
+        description: "Municipality ID"
+        data_type: number
+      - name: BUILDING_OWNER_IDNO
+        description: "Building owner ID number"
+        data_type: varchar
+      - name: HOLES_COUNT
+        description: "Holes count"
+        data_type: number
+      - name: FLOOR_COUNT
+        description: "Floor count"
+        data_type: number
+      - name: STORE_AREA
+        description: "Store area"
+        data_type: float
+      - name: TRADE_NAME
+        description: "Trade name"
+        data_type: varchar
+      - name: LOCATION_LICENESE_ID
+        description: "Location license ID"
+        data_type: varchar
+      - name: IDNO
+        description: "ID number"
+        data_type: varchar
+      - name: FULLNAME
+        description: "Full name"
+        data_type: varchar
+      - name: BIRTHDAY
+        description: "Birthday"
+        data_type: varchar
+      - name: OWNER_TYPE_ID
+        description: "Owner type ID"
+        data_type: number
+      - name: CLIENT_TYPE_NAME
+        description: "Client type name"
+        data_type: varchar
+      - name: IDSOURCE
+        description: "ID source"
+        data_type: varchar
+      - name: IDSTARTDATE
+        description: "ID start date"
+        data_type: varchar
+      - name: IDENDDATE
+        description: "ID end date"
+        data_type: varchar
+      - name: MOBILENO
+        description: "Mobile number"
+        data_type: number
+      - name: EMAIL
+        description: "Email"
+        data_type: varchar
+      - name: OWNER_GENDER
+        description: "Owner gender"
+        data_type: varchar
+      - name: HEALTH_ACTIVITIE
+        description: "Health activity"
+        data_type: number
+      - name: D_ACTIVITIES_NAME
+        description: "Detailed activities name"
+        data_type: varchar
+      - name: M_ACTIVITIES_ID
+        description: "Main activities ID"
+        data_type: number
+      - name: M_ACTIVITIES_NAME
+        description: "Main activities name"
+        data_type: varchar
+      - name: ISIC_NUMBER
+        description: "ISIC number"
+        data_type: varchar
+      - name: ISIC_DESC
+        description: "ISIC description"
+        data_type: varchar
+      - name: UNITS_COUNT
+        description: "Units count"
+        data_type: number
+      - name: ACCOMMODATION_TYPE_ID
+        description: "Accommodation type ID"
+        data_type: number
+      - name: ACCOMIDATION_DESC
+        description: "Accommodation description"
+        data_type: varchar
+      - name: FEMALE_ONLY
+        description: "Female only flag"
+        data_type: varchar
+      - name: ACTIVITIE_TYPE_ID
+        description: "Activity type ID"
+        data_type: number
+      - name: ACTIVITIE_TYPE_NAME
+        description: "Activity type name"
+        data_type: varchar
+      - name: IS_CITIZEN_PLEDGED_TOCLEAN
+        description: "Citizen pledged to clean flag"
+        data_type: number
+
+  - name: V_BUILD_MAIN_REQ_HAIL_37
+    description: "Building main request view"
+    columns:
+      - name: LICENSE_ID
+        description: "License ID"
+        data_type: number
+      - name: ISSUE_DATE
+        description: "Issue date"
+        data_type: varchar
+      - name: EXPIRATION_DATE
+        description: "Expiration date"
+        data_type: varchar
+      - name: BUILD_DESC
+        description: "Building description"
+        data_type: varchar
+      - name: LICENSE_TYPE
+        description: "License type"
+        data_type: number
+      - name: LICENSE_TYPE_DESC
+        description: "License type description"
+        data_type: varchar
+      - name: BUILDING_TYPE
+        description: "Building type"
+        data_type: number
+      - name: BUILDING_DESC
+        description: "Building description"
+        data_type: varchar
+      - name: MAIN_BUILDING_CLASS
+        description: "Main building class"
+        data_type: number
+      - name: MAIN_BUILDING_DESC
+        description: "Main building description"
+        data_type: varchar
+      - name: SUB_BUILDING_CLASS
+        description: "Sub building class"
+        data_type: number
+      - name: SUB_BUILDING_DESC
+        description: "Sub building description"
+        data_type: varchar
+      - name: OLD_LICENSE_ID
+        description: "Old license ID"
+        data_type: varchar
+      - name: AMMANA_ID
+        description: "Amana ID"
+        data_type: number
+      - name: AMANA_NAME
+        description: "Amana name"
+        data_type: varchar
+      - name: BALADI_ID
+        description: "Baladi ID"
+        data_type: number
+      - name: BALADI_ANAME
+        description: "Baladi Arabic name"
+        data_type: varchar
+      - name: DISTRICT_ID
+        description: "District ID"
+        data_type: number
+      - name: DISTRICTNAME
+        description: "District name"
+        data_type: varchar
+      - name: MAP_NO
+        description: "Map number"
+        data_type: varchar
+      - name: BLOCK_NO
+        description: "Block number"
+        data_type: varchar
+      - name: X
+        description: "X coordinate"
+        data_type: float
+      - name: Y
+        description: "Y coordinate"
+        data_type: float
+      - name: BUILDING_FLAT_AREA
+        description: "Building flat area"
+        data_type: float
+      - name: AREA
+        description: "Area"
+        data_type: float
+      - name: OWNERSHIP_DOC_TYPE
+        description: "Ownership document type"
+        data_type: number
+      - name: OWNERSHIP_DOC_DESC
+        description: "Ownership document description"
+        data_type: varchar
+      - name: OWNERSHIP_DOC_NO
+        description: "Ownership document number"
+        data_type: varchar
+      - name: OWNERSHIP_DOC_DATE
+        description: "Ownership document date"
+        data_type: varchar
+      - name: OWNERSHIP_DOC_GDATE
+        description: "Ownership document Gregorian date"
+        data_type: date
+      - name: ENG_OFF_DESIGNER_ID
+        description: "Engineering office designer ID"
+        data_type: varchar
+      - name: ENG_OFF_DESIGNER_NAME
+        description: "Engineering office designer name"
+        data_type: varchar
+      - name: ENG_OFF_CONSULTANT_ID
+        description: "Engineering office consultant ID"
+        data_type: varchar
+      - name: ENG_OFF_CONSULTANT_NAME
+        description: "Engineering office consultant name"
+        data_type: varchar
+      - name: CONTRACTOR_ID
+        description: "Contractor ID"
+        data_type: varchar
+      - name: CONTRACTOR_NAME
+        description: "Contractor name"
+        data_type: varchar
+      - name: WASTE_CONTRACTOR_ID
+        description: "Waste contractor ID"
+        data_type: varchar
+      - name: WASTE_CONTRACTOR_NAME
+        description: "Waste contractor name"
+        data_type: varchar
+      - name: SURVEY_REPORT_ID
+        description: "Survey report ID"
+        data_type: varchar
+      - name: SURVEY_REPORT_DATE
+        description: "Survey report date"
+        data_type: varchar
+      - name: SURVEY_REPORT_GDATE
+        description: "Survey report Gregorian date"
+        data_type: varchar
+      - name: SUBMITTER_TYPE
+        description: "Submitter type"
+        data_type: number
+      - name: SUBMITTER_TYPE_DESC
+        description: "Submitter type description"
+        data_type: number
+      - name: SUBMITTER_IDNO
+        description: "Submitter ID number"
+        data_type: number
+      - name: SUBMITTER_NAME
+        description: "Submitter name"
+        data_type: varchar
+      - name: INSUR_DOCUMENT_ID
+        description: "Insurance document ID"
+        data_type: varchar
+      - name: INSUR_DOCUMENT_DATE
+        description: "Insurance document date"
+        data_type: number
+      - name: INSUR_DOCUMENT_GDATE
+        description: "Insurance document Gregorian date"
+        data_type: date
+      - name: ISOL_GLASS_TYPE
+        description: "Isolation glass type"
+        data_type: varchar
+      - name: ISOL_GLASS_VALUE
+        description: "Isolation glass value"
+        data_type: varchar
+      - name: ISOL_ROOF_TYPE
+        description: "Isolation roof type"
+        data_type: varchar
+      - name: ISOL_ROOF_VALUE
+        description: "Isolation roof value"
+        data_type: varchar
+      - name: ISOL_WALL_TYPE
+        description: "Isolation wall type"
+        data_type: varchar
+      - name: ISOL_WALL_VALUE
+        description: "Isolation wall value"
+        data_type: varchar
+
+  - name: V_KROKI_MAIN_DATA_HAIL_37
+    description: "Kroki main data view"
+    columns:
+      - name: C_SURVEY_REPORT_ID
+        description: "Survey report ID"
+        data_type: number
+      - name: L_ISSUE_DATE
+        description: "License issue date"
+        data_type: varchar
+      - name: L_ISSUE_GT
+        description: "License issue Gregorian date"
+        data_type: date
+      - name: L_EXPIRATION_DATE
+        description: "License expiration date"
+        data_type: varchar
+      - name: V_PURPOSE_ID
+        description: "Purpose ID"
+        data_type: number
+      - name: PURPOSE_DESC
+        description: "Purpose description"
+        data_type: varchar
+      - name: V_AREA
+        description: "Area"
+        data_type: varchar
+      - name: V_MAIN_BUILDING_CLASS
+        description: "Main building class"
+        data_type: varchar
+      - name: MAIN_BUILDING_DESC
+        description: "Main building description"
+        data_type: varchar
+      - name: V_SUB_BUILDING_CLASS
+        description: "Sub building class"
+        data_type: varchar
+      - name: SUB_BUILDING_DESC
+        description: "Sub building description"
+        data_type: varchar
+      - name: L_NOTES
+        description: "License notes"
+        data_type: varchar
+      - name: AMANA_ID
+        description: "Amana ID"
+        data_type: number
+      - name: AMANA_NAME
+        description: "Amana name"
+        data_type: varchar
+      - name: BALADI_ID
+        description: "Baladi ID"
+        data_type: number
+      - name: BALADIA_NAME
+        description: "Baladi Arabic name"
+        data_type: varchar
+      - name: R_DISTRICT_ID
+        description: "District ID"
+        data_type: number
+      - name: DISTRICTNAME
+        description: "District name"
+        data_type: varchar
+      - name: R_MAP_NO
+        description: "Map number"
+        data_type: varchar
+      - name: V_BLOCK_NO
+        description: "Block number"
+        data_type: varchar
+      - name: V_OWNERSHIP_DOC_TYPE
+        description: "Ownership document type"
+        data_type: number
+      - name: OWNERSHIP_DOC_DESC
+        description: "Ownership document description"
+        data_type: varchar
+      - name: V_OWNERSHIP_DOC_NO
+        description: "Ownership document number"
+        data_type: varchar
+      - name: OWNERSHIP_DOC_DATE
+        description: "Ownership document date"
+        data_type: varchar
+      - name: V_ENG_OFFICE_ID
+        description: "Engineering office ID"
+        data_type: varchar
+      - name: ENG_OFFICE_NAME
+        description: "Engineering office name"
+        data_type: varchar
+      - name: ENG_OFFICE_MOBILE
+        description: "Engineering office mobile"
+        data_type: varchar
+      - name: HAS_NEIGHBORS
+        description: "Has neighbors flag"
+        data_type: number
+      - name: HAS_BORDERS
+        description: "Has borders flag"
+        data_type: number
+      - name: HAS_INSTANT
+        description: "Has instant flag"
+        data_type: number
+      - name: IS_STREETS_ASPHALTED
+        description: "Streets asphalted flag"
+        data_type: number
+      - name: V_ADDRESS
+        description: "Address"
+        data_type: varchar
+      - name: V_STREET_NAME
+        description: "Street name"
+        data_type: varchar
+      - name: V_POSTAL_CODE
+        description: "Postal code"
+        data_type: varchar
+
+  - name: BLDY_LIC_IN_RAQABA_ALL
+    description: "Table containing license information for businesses in Raqaba"
+    columns:
+      - name: trade_name
+        description: "The trade or business name"
+        tests:
+          - not_null
+      - name: store_area
+        description: "The area of the store/business"
+        tests:
+          - not_null
+      - name: sdad_update_date
+        description: "The date when the record was last updated"
+        tests:
+          - not_null
+      - name: requests_type
+        description: "Type of the request (decimal code)"
+      - name: requests_id
+        description: "Unique identifier for the request"
+        tests:
+          - unique
+          - not_null
+      - name: owner_type_id
+        description: "Identifier for the owner type"
+      - name: observation_status_name
+        description: "Name of the observation status"
+      - name: observation_status
+        description: "Status code of the observation"
+      - name: mobile
+        description: "Mobile contact number"
+      - name: location_district
+        description: "District where the business is located"
+      - name: licenses_start_ndate
+        description: "Start date of the license (in national date format)"
+      - name: licenses_no
+        description: "License number"
+        tests:
+          - not_null
+          - unique
+      - name: licenses_end_ndate
+        description: "Expiration date of the license (in national date format)"

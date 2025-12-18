@@ -1,0 +1,12 @@
+
+  
+    
+
+    create table "iceberg"."silver"."cadastral"
+      
+      
+    as (
+      SELECT * FROM "iceberg"."public"."V_KROKI_MAIN_DATA_HAIL_37"
+    );
+
+  

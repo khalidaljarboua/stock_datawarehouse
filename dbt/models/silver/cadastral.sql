@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('public', 'V_KROKI_MAIN_DATA_HAIL_37') }}

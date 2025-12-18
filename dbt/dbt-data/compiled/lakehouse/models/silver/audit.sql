@@ -1,0 +1,1 @@
+SELECT * FROM "iceberg"."public"."BLDY_LIC_IN_RAQABA_ALL"

@@ -1,0 +1,5 @@
+setuptools
+dbt-core
+# dbt==1.0.0.38.12
+dbt-snowflake
+dbt-trino

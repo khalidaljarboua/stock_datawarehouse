@@ -1,0 +1,22 @@
+version: 2
+
+seeds:
+  - name: commercial_moves
+    config:
+      column_types:
+        licence_id: BIGINT
+        request_id: BIGINT
+        isic_activity_code: BIGINT
+        detailed_activity_code: BIGINT
+
+  - name: construction_moves
+    config:
+      column_types:
+        licence_id: BIGINT
+        request_id: BIGINT
+
+  - name: cadastral_moves
+    config:
+      column_types:
+        licence_id: BIGINT
+        request_id: BIGINT

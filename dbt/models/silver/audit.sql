@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('public', 'BLDY_LIC_IN_RAQABA_ALL') }}
