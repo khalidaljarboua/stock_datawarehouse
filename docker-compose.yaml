@@ -341,37 +341,6 @@ services:
       interval: 2s
       timeout: 2s
       retries: 5
-      
-  # Nessie (Catalog for Git-like versioning)
-  nessie:
-    image: ghcr.io/projectnessie/nessie:0.104.2
-    container_name: nessie
-    ports:
-      # API port
-      - "19120:19120"
-      # Management port (metrics and health checks)
-      - "9002:9000"
-    depends_on:
-      - mongo
-    environment:
-      - nessie.version.store.type=MONGODB
-      - quarkus.mongodb.database=nessie
-      - quarkus.mongodb.connection-string=mongodb://root:password@mongo:27017
-    networks:
-      - lakehouse_network
-  
-  mongo:
-    image: mongo
-    container_name: mongo
-    ports:
-      - "27017:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
-    networks:
-      - lakehouse_network
-    volumes:
-      - mongo_data:/data/db
 
   # Trino (SQL query engine)
   trino:
